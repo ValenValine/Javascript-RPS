@@ -14,12 +14,14 @@ function playRound(playerSelection, computerSelection){
         return "You lose. Scissors beat paper."
     } else if (playerSelection == "paper" && computerSelection == "rock"){
         return "You win. Paper beats rock."
-    } else{
+    } else if (playerSelection == computerSelection){
         return "Tie. You and computer made the same choice."
+    } else{
+        return "Please choose among rock, paper, or scissors only."
     }
 }
 
-
-const playerSelection = "rock";
+const playerSelection = prompt("Rock, paper, or scissors?");
 console.log(computerSelection)
-console.log(playRound(playerSelection, computerSelection))
+console.log(playRound(playerSelection.toLowerCase(), computerSelection))
+
