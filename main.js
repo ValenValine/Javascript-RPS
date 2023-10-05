@@ -1,27 +1,48 @@
 let computerSelections = ["rock", "paper","scissors"];
-let computerSelection = computerSelections[Math.floor(Math.random() * computerSelections.length)];
+let countPlayerWin = 0
+let countComputerWin = 0
+
+
+
+function game() {
+    for (let i = 1; i <= 5; i++) {
+        playRound();
+        console.log("Computer score = " + countComputerWin + " Player score = " + countPlayerWin)
+    }
+
+
 
 function playRound(playerSelection, computerSelection){
+    playerSelection = prompt("Rock, paper, or scissors?").toLowerCase();
+    computerSelection = computerSelections[Math.floor(Math.random() * computerSelections.length)];
     if (playerSelection == "rock" && computerSelection == "scissors"){
-        return "You win. Rock beats scissors."
+        console.log("You win. Rock beats scissors.")
+        countPlayerWin +=  1;
     } else if (playerSelection == "rock" && computerSelection == "paper"){
-        return "You lose. Paper beats rock."
+        console.log("You lose. Paper beats rock.")
+        countComputerWin += 1;
     } else if (playerSelection == "scissors" && computerSelection == "paper"){
-        return "You win. Scissors beats paper."
+        console.log("You win. Scissors beats paper.")
+        countPlayerWin += 1;
     } else if (playerSelection == "scissors" && computerSelection == "rock"){
-        return "You lose. Rock beats scissors."
+        console.log("You lose. Rock beats scissors.")
+        countComputerWin += 1;
     } else if (playerSelection == "paper" && computerSelection == "scissors"){
-        return "You lose. Scissors beat paper."
+        console.log("You lose. Scissors beat paper.")
+        countComputerWin += 1;
     } else if (playerSelection == "paper" && computerSelection == "rock"){
-        return "You win. Paper beats rock."
+        console.log("You win. Paper beats rock.")
+        countPlayerWin += 1;
     } else if (playerSelection == computerSelection){
-        return "Tie. You and computer made the same choice."
+        console.log("Tie. You and computer made the same choice.")
     } else{
-        return "Please choose among rock, paper, or scissors only."
+        console.log("Please choose among rock, paper, or scissors only.")
     }
 }
 
-const playerSelection = prompt("Rock, paper, or scissors?");
-console.log(computerSelection)
-console.log(playRound(playerSelection.toLowerCase(), computerSelection))
+}
+
+
+
+game()
 
