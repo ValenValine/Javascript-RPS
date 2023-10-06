@@ -5,15 +5,28 @@
   <meta charset="UTF-8">
   <title>Page Title</title>
   <script src="main.js" defer></script>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Russo+One&display=swap" rel="stylesheet"> 
 </head>
 
 <body>
-  <button id="buttonRock">Rock</button>
-  <button id="buttonPaper">Paper</button>
-  <button id="buttonScissors">Scissors</button>
-  <div id="points"></div>
-  <div id="results"></div>
-  <div id="winorlose"></div>
+  <div class="container">
+    <h1>LET'S PLAY A GAME:</h1>
+    <h2>What would you choose?</h2>
+
+    <div class="button-container">
+      <button id="buttonRock">Rock</button>
+      <button id="buttonPaper">Paper</button>
+      <button id="buttonScissors">Scissors</button>
+    </div>
+    <div class="score-container">
+      <div id="points"></div>
+      <div id="results"></div>
+      <div id="winorlose"></div>
+    </div>
+  </div>
 </body>
 
 

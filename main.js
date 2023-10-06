@@ -43,15 +43,20 @@ function playRound(playerSelection, computerSelection){
         results.innerHTML = "Tie. You and computer made the same choice."
     }
     const points = document.querySelector('#points')
-    points.textContent = "Computer score = " + countComputerWin + " Player score = " + countPlayerWin;
+    points.textContent = "Computer score = " + countComputerWin + "  Player score = " + countPlayerWin;
     
     if (countPlayerWin == 5){
-        winorlose.innerHTML = "You win."
-        return
+        winorlose.innerHTML = "Game over. You win!"
+        buttonPaper.setAttribute("disabled", 1)
+        buttonRock.setAttribute("disabled", 1)
+        buttonScissors.setAttribute("disabled", 1)
+
     } else if (countComputerWin == 5){
-        winorlose.innerHTML = "You lose."
-        return
-    }
+        winorlose.innerHTML = "You lose. Good game." 
+        buttonPaper.setAttribute("disabled", 1)
+        buttonRock.setAttribute("disabled", 1)
+        buttonScissors.setAttribute("disabled", 1)
+    } 
     };
 }
 
