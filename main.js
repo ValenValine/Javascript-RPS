@@ -43,7 +43,8 @@ function playRound(playerSelection, computerSelection){
         results.innerHTML = "Tie. You and computer made the same choice."
     }
     const points = document.querySelector('#points')
-    points.textContent = "Computer score = " + countComputerWin + "  Player score = " + countPlayerWin;
+    pointsComputer.textContent = "Computer score = " + countComputerWin
+    pointsPlayer.textContent = "  Player score = " + countPlayerWin;
     
     if (countPlayerWin == 5){
         winorlose.innerHTML = "Game over. You win!"

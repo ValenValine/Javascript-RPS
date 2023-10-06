@@ -39,12 +39,16 @@ button{
 }
 
 
-
 .score-container{
     display:flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.points{
+    display:flex;
+    gap: 50px;
 }
 
 
