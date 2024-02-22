@@ -1,4 +1,4 @@
-# rockpaperscissors
+# Javascript-based RPS
 
 
 The project was done as a part of The Odin Project and was coded mainly in Javascript.
